@@ -5,8 +5,9 @@ public class Main {
         float hp, dmg;
         String name;
         Scanner input = new Scanner(System.in);
-        boolean error;
+        boolean error, endGame = false;
         Troll troll1 = null, troll2 = null;
+        int sel = 0;
 
         do {
             try {
@@ -42,6 +43,22 @@ public class Main {
             }
         } while(error);
 
-
+        do {
+            do {
+                System.out.print("\n0. Esci" +
+                                "\n1. Troll 1 attacca" +
+                                "\n2. Troll 2 attacca" +
+                                "Seleziona: ");
+                sel = input.nextInt();
+            } while(sel < 0 || sel > 2);
+            switch (sel) {
+                case 1:
+                    troll1.attacca(troll2);
+                    break;
+                case 2:
+                    troll2.attacca(troll1);
+                    break;
+            }
+        } while(sel != 0);
     }
 }
