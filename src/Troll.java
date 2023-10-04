@@ -41,6 +41,10 @@ public class Troll {
         enemy.setHp(enemy.getHp()-dmg);
     }
 
+    public boolean isAlive() {
+        return hp > 0;
+    }
+
     @Override
     public String toString() {
         return "Troll {" +
