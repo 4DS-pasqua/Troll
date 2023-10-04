@@ -59,6 +59,13 @@ public class Main {
                     troll2.attacca(troll1);
                     break;
             }
-        } while(sel != 0);
+            if(!troll1.isAlive()) {
+                endGame = true;
+                System.out.print("\nTroll 1 è morto!");
+            } else if(!troll2.isAlive()) {
+                endGame = true;
+                System.out.print("\nTroll 2 è morto!");
+            }
+        } while(sel != 0 && endGame);
     }
 }
