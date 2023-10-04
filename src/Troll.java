@@ -37,6 +37,10 @@ public class Troll {
         this.name = name;
     }
 
+    public void attacca(Troll enemy) {
+        enemy.setHp(enemy.getHp()-dmg);
+    }
+
     @Override
     public String toString() {
         return "Troll {" +
