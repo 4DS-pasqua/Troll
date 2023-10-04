@@ -26,9 +26,10 @@ public class Main {
             }
         } while(error);
 
+        input = new Scanner(System.in);
         do {
             try {
-                System.out.print("Inserisci il nome del secondo Troll: ");
+                System.out.print("\nInserisci il nome del secondo Troll: ");
                 name = input.nextLine();
                 input = new Scanner(System.in);
                 System.out.print("\nInserisci i punti vita del secondo Troll: ");
@@ -48,7 +49,7 @@ public class Main {
                 System.out.print("\n0. Esci" +
                                 "\n1. Troll 1 attacca" +
                                 "\n2. Troll 2 attacca" +
-                                "Seleziona: ");
+                                "\nSeleziona: ");
                 sel = input.nextInt();
             } while(sel < 0 || sel > 2);
             switch (sel) {
@@ -61,11 +62,11 @@ public class Main {
             }
             if(!troll1.isAlive()) {
                 endGame = true;
-                System.out.print("\nTroll 1 è morto!");
+                System.out.print("\n" + troll1.getName() + " è morto!");
             } else if(!troll2.isAlive()) {
                 endGame = true;
-                System.out.print("\nTroll 2 è morto!");
+                System.out.print("\n" + troll2.getName() + " è morto!");
             }
-        } while(sel != 0 && endGame);
+        } while(sel != 0 && !endGame);
     }
 }
