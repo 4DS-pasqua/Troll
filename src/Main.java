@@ -60,6 +60,7 @@ public class Main {
                     troll2.attacca(troll1);
                     break;
             }
+            System.out.print(troll1 + "\n" + troll2);
             if(!troll1.isAlive()) {
                 endGame = true;
                 System.out.print("\n" + troll1.getName() + " è morto!");

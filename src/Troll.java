@@ -48,9 +48,9 @@ public class Troll {
     @Override
     public String toString() {
         return "Troll {" +
-                "hp =" + hp +
-                ", dmg =" + dmg +
-                ", name ='" + name + '\'' +
+                "Punti vita = " + hp +
+                ", punti danno = " + dmg +
+                ", nome = '" + name + '\'' +
                 '}';
     }
 }
